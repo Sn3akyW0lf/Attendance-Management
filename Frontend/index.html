@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="my-form" class="text-bg-secondary bg-opacity-20 border border-dark border-size-3 rounded-3 p-5 m-3" method="POST">
+            <div class="card p-3 m-3">
+                <h2 class="card-header">Inventory Tracker</h2>
+                <div class="card-body">
+                    <span class="card-text">
+                        Tracking and Maintaining all the Inventory of the Grocery Shop.
+                    </span>
+                    
+                </div>
+            </div>
+            
+            <div>
+                <div id="msg_item"></div>
+                <label for="item" class="form-label">Item Name</label>
+                <input type="text" id="item" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Item Name" />
+                
+            </div>
+            <div>
+                <div id="msg_desc"></div>
+                <label for="item_desc" class="form-label">Item Description</label>
+                <input type="text" id="item_desc" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Item Description" />
+            </div>
+            <div>
+                <div id="msg_item_price"></div>
+                <label for="item_price" class="form-label">Price</label>
+                <input type="number" id="item_price" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Item Price" />
+            </div>
+            <div>
+                <div id="msg_item_qty"></div>
+                <label for="item_qty" class="form-label">Quantity</label>
+                <input type="number" id="item_qty" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Item Quantity" />
+            </div>    
+            <input type="submit" value="LOG ITEM" class="btn btn-sm btn-outline-light p-3 m-3" />
+        </form>
+        <div class="container text-bg-secondary rounded-2 p-2">
+             <center><h2 class="title">Previous Expenses</h2></center>
+             <table class="table table-bordered rounded-2 p-2">
+                <thead>
+                    <tr>
+                        <th class="d-none">
+                            id
+                        </th>
+                        <th>
+                            Item
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tblGrosery">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+</body>
+
+</html>
